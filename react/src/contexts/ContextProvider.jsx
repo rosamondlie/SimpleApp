@@ -8,8 +8,10 @@ const StateContext = createContext({
 })
 
 export const ContextProvider = ({children}) => {
-    const [user, setUser] = useState({});
-    const [token, _setToken] = useState(123);
+    const [user, setUser] = useState({
+        name: 'John'
+    });
+    const [token, _setToken] = useState(null);
     // disini fungsinya biar klo org udah login, bia ttp terdektsi udah login
     const setToken = (token) => {
         _setToken(token)
